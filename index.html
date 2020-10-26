@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/patternfly.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.59.5/css/patternfly.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.59.5/css/patternfly-additions.min.css"
+    />
+
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+
+    <!-- NAVIGATION START -->
+    <pfe-navigation pfe-sticky pfe-close-on-click="external" pfe-menu-label="Menu">
+      <div slot="skip">
+          <a href="#rh-main-content">Skip to content</a>
+      </div>
+      <div slot="logo">
+          <a href="#"><img src="https://www.ansible.com/hubfs/Logo-Red_Hat-Ansible-A-Reverse-SVG.svg" title="Company logo"></a>
+      </div>
+      <pfe-navigation-item slot="search" pfe-icon="web-search">
+          <h3 slot="trigger">
+              <a href="#url-to-search-page">Search</a>
+          </h3>
+          <div slot="tray" hidden>
+              <div class="pfe-navigation-item__tray--container">
+                  <form>
+                      <input type="text" name="search" value placeholder="Enter your search term" style="height: 30px; width: 60%; margin-right: 10px;">
+                      <pfe-cta priority="primary">
+                          <a href="#">Search</a>
+                      </pfe-cta>
+                  </form>
+              </div>
+          </div>
+      </pfe-navigation-item>
+      <form slot="mobile-search" hidden>
+          <input type="text" name="search" value placeholder="Enter your search term" style="height: 30px; width: 60%; margin-right: 10px;">
+          <pfe-cta priority="primary">
+              <a href="#">Search</a>
+          </pfe-cta>
+      </form>
+      <pfe-navigation-main role="navigation" aria-label="Main">
+          <ul>
+              <li>
+                  <pfe-navigation-item>
+                      <h3 slot="trigger">
+                          <a href="#">Products</a>
+                      </h3>
+                      <div slot="tray" hidden>
+                          <div class="pfe-navigation-item__tray--container">
+                              <div class="pfe-navigation-grid">
+                                  <div class="pfe-navigation--column">
+                                      <div class="pfe-link-list">
+                                          <h4 class="pfe-link-list--header">Widget</h4>
+                                          <ul class="pfe-link-list--group">
+                                              <li class="pfe-link-list--group-item">
+                                                  <a href="#">Widget #1</a>
+                                              </li>
+                                              <li class="pfe-link-list--group-item">
+                                                  <a href="#">Widget #2</a>
+                                              </li>
+                                              <li class="pfe-link-list--group-item">
+                                                  <a href="#">Widget #3</a>
+                                              </li>
+                                              <li class="pfe-link-list--group-item">
+                                                  <a href="#">Widget #4</a>
+                                              </li>
+                                          </ul>
+                                      </div>
+                                  </div>
+                                  <div class="pfe-navigation--column">
+                                      <div class="pfe-link-list">
+                                          <h4 class="pfe-link-list--header">Thing-a-majig</h4>
+                                          <ul class="pfe-link-list--group">
+                                              <li class="pfe-link-list--group-item">
+                                                  <a href="#">Thing-a-majig #1</a>
+                                              </li>
+                                              <li class="pfe-link-list--group-item">
+                                                  <a href="#">Thing-a-majig #2</a>
+                                              </li>
+                                              <li class="pfe-link-list--group-item">
+                                                  <a href="#">Thing-a-majig #3</a>
+                                              </li>
+                                          </ul>
+                                      </div>
+                                  </div>
+                                  <div class="pfe-navigation--column">
+                                      <div class="pfe-link-list">
+                                          <h4 class="pfe-link-list--header">Doohicky</h4>
+                                          <ul class="pfe-link-list--group">
+                                              <li class="pfe-link-list--group-item">
+                                                  <a href="#">Doohicky #1</a>
+                                              </li>
+                                              <li class="pfe-link-list--group-item">
+                                                  <a href="#">Doohicky #2</a>
+                                              </li>
+                                              <li class="pfe-link-list--group-item">
+                                                  <a href="#">Doohicky #3</a>
+                                              </li>
+                                          </ul>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="pfe-navigation--footer">
+                                  <div class="pfe-navigation--column">
+                                      <pfe-cta pfe-priority="primary">
+                                          <a href="#">View all widgets</a>
+                                      </pfe-cta>
+                                  </div>
+                                  <div class="pfe-navigation--column">
+                                      <pfe-cta>
+                                          <a href="#">Explore our thing-a-magigs</a>
+                                      </pfe-cta>
+                                  </div>
+                                  <div class="pfe-navigation--column">
+                                      <pfe-cta>
+                                          <a href="#">Buy things online</a>
+                                      </pfe-cta>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </pfe-navigation-item>
+              </li>
+              <li>
+                  <pfe-navigation-item>
+                      <h3>
+                          <a href="#">Direct link example</a>
+                      </h3>
+                  </pfe-navigation-item>
+              </li>
+          </ul>
+      </pfe-navigation-main>
+      <pfe-navigation-item slot="language" pfe-icon="web-globe">
+          <h3 slot="trigger">
+              <a href="#url-to-language-page">English</a>
+          </h3>
+          <div slot="tray" hidden>
+              <div class="container">
+                  <p>language tray content</p>
+              </div>
+          </div>
+      </pfe-navigation-item>
+      <a slot="mobile-language" href="#url-to-language-page" pfe-icon="web-globe" hidden>English</a>
+      <pfe-navigation-item slot="login" pfe-icon="web-user">
+          <h3 slot="trigger">
+              <a href="#url-to-login-page">Log in</a>
+          </h3>
+          <div slot="tray" hidden>
+              <div class="container">
+                  <p>login tray content</p>
+              </div>
+          </div>
+      </pfe-navigation-item>
+      <a slot="mobile-login" href="#url-to-login-page" pfe-icon="web-user" hidden>Log in</a>
+      <pfe-navigation-item slot="site-switcher" pfe-icon="web-grid-3x3">
+          <h3 slot="trigger">
+              <a href="#url-to-site-switcher-page">Websites</a>
+          </h3>
+          <div slot="tray" hidden>
+              <div class="container">
+                  <p>site-switcher tray content</p>
+              </div>
+          </div>
+      </pfe-navigation-item>
+  </pfe-navigation>
+
+
+    </pfe-navigation>
+
+    <!-- NAVIGATION END -->
+
+    <section id="hero" class="pt-2 pb-4">
+      <div class="container fluid pt-2 pb-2">
+        <div class="row-fluid-wrapper row-depth-1 row-number-1 pf-u-p-lg pf-u-m-lg">
+          <div class="row-fluid pt-2 pb-2">
+            <div class="pf-l-grid">
+              <div class="pf-l-grid__item pf-l-grid__item pf-m-8-col-on-sm pf-m-4-col-on-lg pf-m-6-col-on-xl">
+                <h1 class="pf-m-lg text-white hero-lg">Drive automation across open hybrid cloud deployments</h1>
+                <p class="cta-group text-white">Red Hat is bringing together the power of OpenShift Container Platform and Ansible Automation Platform</p>
+                <br>
+                <pfe-button pfe-variant="danger">
+                  <button class="btn-cta">Learn more</button>
+                </pfe-button>
+              </div>
+              <div class="pf-l-grid__item pf-l-grid__item pf-m-8-col-on-sm pf-m-4-col-on-lg pf-m-6-col-on-xl">
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section>
+      <div class="container pop-over">
+        <div class="row">
+          <div class="pf-l-grid pf-m-gutter pf-m-all-10-col-on-sm pf-m-all-6-col-on-md pf-m-all-4-col-on-lg pf-m-all-4-col-on-xl">
+            <pfe-card pfe-color="lightest" pfe-border>
+              <p>See all the latest news and announcements from AnsibleFest 2020 Virtual Experience.</p>
+              <pfe-cta slot="pfe-card--footer">
+                <a href="#" style="font-weight: bold;">Read more &nbsp;<pfe-icon pfe-color="info" icon="web-arrow-right"></pfe-icon></a>
+              </pfe-cta>
+            </pfe-card>
+          
+            <pfe-card pfe-color="lightest" pfe-border>
+              <p>Download our latest e-book and learn about the benefits of automating IT infrastructure workflows with a united platform.</p>
+              <pfe-cta slot="pfe-card--footer">
+                <a href="#" style="font-weight: bold;">Download now &nbsp;<pfe-icon pfe-color="info" icon="web-arrow-right"></pfe-icon></a>
+              </pfe-cta>
+            </pfe-card>
+            
+            <pfe-card pfe-color="lightest" pfe-border>
+              <p>Forrester names Red Hat Ansible Automation Platform among solutions that lead the pack for infrastructure automation platform providers.</p>
+              <pfe-cta slot="pfe-card--footer">
+                <a href="#" style="font-weight: bold;">Learn more &nbsp;<pfe-icon pfe-color="info" icon="web-arrow-right"></pfe-icon></a>
+              </pfe-cta>
+            </pfe-card>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pt-2 pb-2">
+      <div class="container pt-2">
+        <div class="row">
+          <div class="pf-l-grid ">
+            <div class="pf-l-grid__item pt-2 pb-2 pf-l-grid__item pf-m-7-col-on-sm pf-m-5-col-on-lg pf-m-5-col-on-xl">
+              <h1 style="font-weight: bold;">Simple, agentless IT automation that anyone can use</h1>
+              <p>Ansible is a universal language, unraveling the mystery of how work gets done. Turn tough tasks into repeatable playbooks. Roll out enterprise-wide protocols with the push of a button.</p>
+              <br>
+              <pfe-cta>
+                <a href="#" style="font-weight: bold;">How Ansible works &nbsp;<pfe-icon pfe-color="info" icon="web-arrow-right"></pfe-icon></a>
+              </pfe-cta>
+            </div>
+            <div class="pf-l-grid__item pt-2 pb-2 pf-l-grid__item pf-m-2-col-on-sm pf-m-2-col-on-lg pf-m-2-col-on-xl"></div>
+            <div class="pf-l-grid__item pt-2 pb-2 pf-l-grid__item pf-m-7-col-on-sm pf-m-5-col-on-lg pf-m-5-col-on-xl">
+              <p>
+                <img class="img-fluid" src="https://www.ansible.com/hubfs/Images/backgrounds/laptop-woman.jpg" alt="Simple agentless IT automation that anyone can use">
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container pt-2 pb-2">
+        <div class="row">
+          <div class="pf-l-grid pf-m-gutter pf-m-all-12-col-on-sm pf-m-all-6-col-on-md pf-m-all-3-col-on-lg pf-m-all-3-col-on-xl">
+            <div class="pf-l-grid__item"><h2 style="font-weight: bold;">Automate</h2><hr><p>Deploy apps. Manage systems. Crush complexity.</p></div>
+            <div class="pf-l-grid__item"><h2 style="font-weight: bold;">Accelerate</h2><hr><p>Solve problems once and share the results with everyone.</p></div>
+            <div class="pf-l-grid__item"><h2 style="font-weight: bold;">Collaborate</h2><hr><p>Break down silos, create a culture of automation.</p></div>
+            <div class="pf-l-grid__item"><h2 style="font-weight: bold;">Integrate</h2><hr><p>Automate the technologies you already use.</p></div>            
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container pb-2">
+        <div class="row pt-2 pb-2">
+          <h2 class="pb-4" style="font-weight: bold;">What do you want to automate today?</h2>
+          <div class="pf-l-grid pf-m-gutter pf-m-all-6-col-on-sm pf-m-all-4-col-on-md pf-m-all-4-col-on-lg pf-m-all-4-col-on-xl">
+            <div class="pf-l-grid__item item--custom-cta">
+              <a href="#" style="font-weight: bold;">
+                Infrastructure
+              </a>
+            </div>
+            <div class="pf-l-grid__item item--custom-cta">
+              <a href="#">
+                Applications
+              </a>
+            </div>
+            <div class="pf-l-grid__item item--custom-cta">
+              <a href="#">
+                Networks
+              </a>
+            </div>
+            <div class="pf-l-grid__item item--custom-cta">
+              <a href="#">
+                Containers
+              </a>
+            </div> 
+            <div class="pf-l-grid__item item--custom-cta">
+              <a href="#">
+                Security
+              </a>
+            </div>   
+            <div class="pf-l-grid__item item--custom-cta">
+              <a href="#">
+                Cloud
+              </a>
+            </div>              
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="footer-container-wrapper">
+      <div class="footer-container container-fluid">
+  
+  <div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+  <div class="row-fluid ">
+  <div class="span12 widget-span widget-type-global_group p-0" style="" data-widget-type="global_group" data-x="0" data-w="12">
+  <!-- start coded_template: id:6195572945 path:generated_global_groups/6195572944.html -->
+  <div class="" data-global-widget-path="generated_global_groups/6195572944.html"><div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+  <div class="row-fluid ">
+  <div class="span12 widget-span widget-type-raw_html m-0 p-0" style="" data-widget-type="raw_html" data-x="0" data-w="12">
+  <div class="cell-wrapper layout-widget-wrapper">
+  <span id="hs_cos_wrapper_module_152270485910932" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_raw_html" style="" data-hs-cos-general-type="widget" data-hs-cos-type="raw_html"><!-- start coded_template: id:6195900440 path:Custom/Templates/Partials/ans-footer.html -->
+  <footer id="ans-footer">
+  <div class="container">
+  <div class="row">
+  <div class="nav-extended col-md-6 col-lg-8 py-5 order-2 order-md-1">
+  <div class="row">
+  <div class="col-12 col-lg-3">
+  <h6 data-toggle="collapse" data-target="#quick-nav">Quick links</h6>
+  <div id="quick-nav" class="collapse d-lg-block">
+  <nav class="nav flex-column">
+  <a href="https://www.ansible.com/it-automation?hsLang=en-us" class="nav-link">Why Ansible?</a>
+  <a href="https://www.ansible.com/how-ansible-works?hsLang=en-us" class="nav-link">How Ansible Works</a>
+  <a href="https://www.ansible.com/devops?hsLang=en-us" class="nav-link">Ansible for DevOps</a>
+  <a href="https://www.ansible.com/networking?hsLang=en-us" class="nav-link">Network Automation</a>
+  <a href="https://access.redhat.com/products/ansible-tower-red-hat/" class="nav-link">Ansible Support</a>
+  <a href="https://www.ansible.com/contact-us?hsLang=en-us" class="nav-link">Contact Us</a>
+  </nav>
+  </div>
+  </div>
+  <div class="col-12 col-lg-3">
+  <h6 data-toggle="collapse" data-target="#product-nav">Products</h6>
+  <div id="product-nav" class="collapse d-lg-block">
+  <nav class="nav flex-column">
+  <a href="https://www.ansible.com/tower-trial?hsLang=en-us" class="nav-link">Free product trial</a>
+    <a href="https://www.ansible.com/tower?hsLang=en-us" class="nav-link">Ansible Tower</a>
+  
+  <a href="https://www.ansible.com/products/network-automation?hsLang=en-us" class="nav-link">Network Automation</a>
+  <a href="https://www.ansible.com/training-certification?hsLang=en-us" class="nav-link">Training &amp; Certification</a>
+  <a href="https://www.ansible.com/consulting?hsLang=en-us" class="nav-link">Consulting for Ansible</a>
+  </nav>
+  </div>
+  </div>
+  <div class="col-12 col-lg-3">
+  <h6 data-toggle="collapse" data-target="#use-case-nav">Use Cases</h6>
+  <div id="use-case-nav" class="collapse d-lg-block">
+  <nav class="nav flex-column">
+  <a href="https://www.ansible.com/provisioning?hsLang=en-us" class="nav-link">Provisioning</a>
+  <a href="https://www.ansible.com/configuration-management?hsLang=en-us" class="nav-link">Config Management</a>
+  <a href="https://www.ansible.com/application-deployment?hsLang=en-us" class="nav-link">App Deployment</a>
+  <a href="https://www.ansible.com/continuous-delivery?hsLang=en-us" class="nav-link">Continuous Delivery</a>
+  <a href="https://www.ansible.com/security-and-compliance?hsLang=en-us" class="nav-link">Security &amp; Compliance</a>
+  <a href="https://www.ansible.com/orchestration?hsLang=en-us" class="nav-link">Orchestration</a>
+  </nav>
+  </div>
+  </div>
+  <div class="col-12 col-lg-3">
+  <h6 data-toggle="collapse" data-target="#integrations-nav">Integrations</h6>
+  <div id="integrations-nav" class="collapse d-lg-block">
+  <nav class="nav flex-column">
+  <a href="//www.ansible.com/infrastructure" class="nav-link">Infrastructure</a>
+  <a href="//www.ansible.com/network-automation" class="nav-link">Networks</a>
+  <a href="//www.ansible.com/containers" class="nav-link">Containers</a>
+  <a href="//www.ansible.com/cloud" class="nav-link">Cloud</a>
+  <a href="//www.ansible.com/devops-tools" class="nav-link">DevOps Tools</a>
+  </nav>
+  </div>
+  </div>
+  <div class="d-none d-lg-block col-lg-3">
+  &nbsp;
+  </div>
+  <div class="col-12 col-lg-3">
+  <h6 data-toggle="collapse" data-target="#resources">Resources</h6>
+  <div id="resources" class="collapse d-lg-block">
+  <nav class="nav flex-column">
+  <a href="https://www.ansible.com/get-started?hsLang=en-us" class="nav-link">Quick Start Guide</a>
+  <a href="https://www.ansible.com/resources/videos?hsLang=en-us" class="nav-link">Videos</a>
+  <a href="https://www.ansible.com/resources/webinars-training?hsLang=en-us" class="nav-link">Webinars &amp; Training</a>
+  <a href="https://www.ansible.com/resources/ebooks?hsLang=en-us" class="nav-link">E-books</a>
+  <a href="https://www.ansible.com/resources/whitepapers?hsLang=en-us" class="nav-link">Whitepapers</a>
+  <a href="https://www.ansible.com/resources/case-studies?hsLang=en-us" class="nav-link">Case Studies</a>
+  <a href="https://www.ansible.com/partners?hsLang=en-us" class="nav-link">Partners</a>
+  </nav>
+  </div>
+  </div>
+  <div class="col-12 col-lg-3">
+  <h6 data-toggle="collapse" data-target="#community-nav">Community</h6>
+  <div id="community-nav" class="collapse d-lg-block">
+  <nav class="nav flex-column">
+  <a href="https://www.ansible.com/events?hsLang=en-us" class="nav-link">Upcoming Events</a>
+  <a href="https://www.ansible.com/ansiblefest?hsLang=en-us" class="nav-link">AnsibleFest</a>
+  <a href="http://ansible.meetup.com" class="nav-link" target="_blank">Ansible on Meetup</a>
+  <a href="https://github.com/ansible/ansible" class="nav-link" target="_blank">Ansible on GitHub</a>
+  <a href="https://github.com/ansible/awx" class="nav-link" target="_blank">AWX on GitHub</a>
+  </nav>
+  </div>
+  </div>
+  <div class="col-12 col-lg-3">
+  <h6 data-toggle="collapse" data-target="#related">Related Sites</h6>
+  <div id="related" class="collapse d-lg-block">
+  <nav class="nav flex-column">
+  <a href="https://docs.ansible.com/" class="nav-link">Ansible Docs</a>
+  <a href="https://galaxy.ansible.com/" class="nav-link">Ansible Galaxy</a>
+  <a href="https://www.ansible.com/blog?hsLang=en-us" class="nav-link">Ansible Blog</a>
+  </nav>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="col-md-6 col-lg-4 pt-5 px-4 bg-gray-dark order-1 order-md-2">
+  <h5>Red Hat Ansible</h5>
+  <p class="mb-4">Ansible is an open source community project sponsored by Red Hat, it's the simplest way to automate IT. Ansible is the only automation language that can be used across entire IT teams from systems and network administrators to developers and managers.</p>
+  <nav class="nav about flex-column">
+  <a href="https://www.ansible.com/about?hsLang=en-us" class="nav-link">About Us</a>
+  <a href="https://www.ansible.com/about?hsLang=en-us" class="nav-link">Our Story</a>
+  <a href="https://www.ansible.com/press-center?hsLang=en-us" class="nav-link">Press Center</a>
+  <a href="https://www.redhat.com/en/jobs" class="nav-link">Careers</a>
+  </nav>
+  <nav class="nav social">
+  <a href="https://twitter.com/ansible" class="nav-link" target="_blank"><i class="fa fa-twitter"></i></a>
+  <a href="https://www.facebook.com/ansibleautomation" class="nav-link" target="_blank"><i class="fa fa-facebook"></i></a>
+  <a href="https://www.linkedin.com/company/3545/" class="nav-link" target="_blank"><i class="fa fa-linkedin"></i></a>
+  <a href="https://github.com/ansible/ansible" class="nav-link" target="_blank"><i class="fa fa-github"></i></a>
+  </nav>
+  </div>
+  </div>
+  </div>
+  </footer><!-- end coded_template: id:6195900440 path:Custom/Templates/Partials/ans-footer.html --></span>
+  </div><!--end layout-widget-wrapper -->
+  </div><!--end widget-span -->
+  </div><!--end row-->
+  </div><!--end row-wrapper -->
+  </div><!-- end coded_template: id:6195572945 path:generated_global_groups/6195572944.html -->
+  
+  </div><!--end widget-span -->
+  </div><!--end row-->
+  </div><!--end row-wrapper -->
+  
+  <div class="row-fluid-wrapper row-depth-1 row-number-2 ">
+  <div class="row-fluid ">
+  <div class="span12 widget-span widget-type-global_group p-0" style="" data-widget-type="global_group" data-x="0" data-w="12">
+  <!-- start coded_template: id:5991552854 path:generated_global_groups/5991552849.html -->
+  <div class="" data-global-widget-path="generated_global_groups/5991552849.html"><div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+  <div class="row-fluid ">
+  <div class="span12 widget-span widget-type-raw_html p-0" style="" data-widget-type="raw_html" data-x="0" data-w="12">
+  <div class="cell-wrapper layout-widget-wrapper">
+  <span id="hs_cos_wrapper_module_152270485910932" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_raw_html" style="" data-hs-cos-general-type="widget" data-hs-cos-type="raw_html"><!-- start coded_template: id:5993415685 path:Custom/Templates/Partials/universal-footer.html -->
+  <footer id="rh">
+  <div class="container">
+  <div class="row justify-content-between align-items-center">
+  <div class="col-md-3 col-xl-2">
+  <img src="https://cdn2.hubspot.net/hubfs/4305976/images/logos/redhat_logo.svg" class="img-fluid" alt="Red Hat" width="140">
+  </div>
+  <div class="col-md-7 col-xl-9 pb-1">
+  <div class="row">
+  <div class="col-12 col-xl-auto">
+  <p class="mb-0">Copyright © 2020 <span class="text-nowrap">Red Hat, Inc.</span></p>
+  </div>
+  <div class="col-12 col-xl-auto">
+  <nav class="nav">
+  <a href="https://www.redhat.com/en/about/privacy-policy" class="nav-link">Privacy statement</a>
+  <a href="https://www.ansible.com/security?hsLang=en-us" class="nav-link">Security disclosure</a>
+  <a href="https://www.redhat.com/en/about/all-policies-guidelines" class="nav-link">All policies and guidelines</a>
+  <span id="teconsent" style="line-height: 1.1; display: block; opacity: 1;" consent="0,1,2" aria-label="Open Cookie Preferences Modal" role="complementary"><a role="link" id="icon-id07730515929575028" tabindex="0" lang="en" style="cursor: pointer;">Cookie Preferences</a></span>
+  </nav>
+  </div>
+  </div>
+  </div>
+  <div class="col-md-2 col-xl-1 pr-0 text-md-right">
+  <a href="https://www.redhat.com/summit"><img src="https://www.ansible.com/hubfs/images/Logo-Red_Hat-Summit-A-Standard-RGB-02.svg" alt="Red Hat Summit" width="72"></a>
+  </div>
+  </div>
+  </div>
+  </footer><!-- end coded_template: id:5993415685 path:Custom/Templates/Partials/universal-footer.html --></span>
+  </div><!--end layout-widget-wrapper -->
+  </div><!--end widget-span -->
+  </div><!--end row-->
+  </div><!--end row-wrapper -->
+  </div><!-- end coded_template: id:5991552854 path:generated_global_groups/5991552849.html -->
+  
+  </div><!--end widget-span -->
+  </div><!--end row-->
+  </div><!--end row-wrapper -->
+  
+      </div><!--end footer -->
+  </div>
+    
+    <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+      window.ga = function () {
+        ga.q.push(arguments);
+      };
+      ga.q = [];
+      ga.l = +new Date();
+      ga("create", "UA-XXXXX-Y", "auto");
+      ga("set", "anonymizeIp", true);
+      ga("set", "transport", "beacon");
+      ga("send", "pageview");
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async></script>
+    <!-- jQuery -->
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.59.5/js/patternfly.min.js"
+    ></script>
+  </body>
+</html>

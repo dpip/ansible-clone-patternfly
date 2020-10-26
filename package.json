@@ -1,0 +1,31 @@
+{
+  "name": "dpip-patternfly-demo",
+  "version": "0.0.1",
+  "description": "Using Patternfly to create a static site",
+  "keywords": "dpipnc, patternfly, redhat",
+  "license": "",
+  "author": "Daniel Pipkin",
+  "scripts": {
+    "build": "parcel build index.html",
+    "dev": "parcel index.html --open",
+    "start": "npm run build && npm run dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^4.5.0",
+    "parcel-bundler": "^1.12.4",
+    "webpack": "^5.1.3",
+    "webpack-cli": "^4.1.0",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "@patternfly/patternfly-next": "^1.0.175",
+    "@patternfly/pfe-button": "^1.0.0-prerelease.56",
+    "@patternfly/pfe-card": "^1.0.0-prerelease.56",
+    "@patternfly/pfe-navigation": "^1.0.0-prerelease.56",
+    "@patternfly/pfe-styles": "^1.0.0-prerelease.56",
+    "bootstrap": "^4.5.3",
+    "jquery": "^3.5.1",
+    "jquery-slimscroll": "^1.3.8"
+  }
+}
